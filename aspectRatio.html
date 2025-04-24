@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glowed Up Cards 💅</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+      
+    }
+
+    .card-container {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #c2f0f7;
+    }
+
+    .card h2 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.3rem;
+      color: #333;
+      font-size:clamp(1.5rem,5vw,3rem);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: #e0f7fa;
+    }
+
+    /* 💻 Wide screens */
+    @media (min-aspect-ratio: 16/9) {
+      body {
+        background-color: #e0f7fa;
+      }
+    }
+
+    /* 📱 Tall screens */
+    @media (max-aspect-ratio: 3/4) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 80%;
+        background: #fce4ec;
+      }
+
+      body {
+        background-color: #f8bbd0;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <section class="card-container">
+    <div class="card">
+        <img src="https://i.pravatar.cc/100?img=5" alt="Avatar">
+      
+      <h2>Melvin Tabitha</h2>
+      <p>Frontend Developer 💻</p>
+    </div>
+    
+    <div class="card">
+        
+      <img src="https://i.pravatar.cc/100?img=15" alt="Avatar">
+      
+      <h2>Shadzy Mwabe</h2>
+      <p>Security analyst 🗂️</p>
+    </div>
+    <div class="card">
+        <img src="https://i.pravatar.cc/100?img=1" alt="Avatar"> 
+        <h2>Alex N.</h2>
+        <p>UI/UX Designer 🎨</p>
+      </div>
+  </section>
+</body>
+</html>
